@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 i did it
+=======
+this should work
+>>>>>>> 2fc717c2d96d42ed82f5adecc7785e6813c95f32
 =======
 I edited the file
 >>>>>>> 6f82df5bd7d4a7e1aa89bea47f1644d2a1bead20
