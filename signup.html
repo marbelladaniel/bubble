@@ -1,0 +1,95 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Animated Login Form</title>
+    <link rel="sylesheet" href="style.css">
+  </head>
+  <style>
+    body{
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background: none;
+  
+    }
+      body{
+        width: 300px;
+        padding: 40px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background: #000000;
+        text-align: center;
+    }
+    body h1{
+      color: white;
+      text-transform: uppercase;
+      font-weight:500;
+    }
+    body input[type = "text"],body input[type = "password"]{
+      border:0;
+      background:none;
+      display: block;
+      margin: 20px auto;
+      text-align:center;
+      border: 2px solid #ed8c00;
+      padding: 14px 10px;
+      width: 200px;
+      outline: none;
+      color: white;
+      border-radius: 24px;
+      transition: 0.25s;
+    }
+     body input[type = "text"]:focus,body input[type = "password"]:focus{
+      width: 280px;
+      border-color: #cc5d00;
+    }
+    body input[type = "submit"]{
+      border:0;
+      background:none;
+      display: block;
+      margin: 20px auto;
+      text-align:center;
+      border: 2px solid #eeba19;
+      padding: 14px 40px;
+      outline: none;
+      color: white;
+      border-radius: 24px;
+      transition: 0.25s;
+      cursor:pointer;
+    }
+    input[type = 'submit']:hover{
+      background: #eeba19
+    }
+    a{
+      text-decoration: none;
+      color: white;
+    }
+    a:hover{
+      color: #eeba19;
+    }
+     
+  </style>
+  <body>
+<form class="box" action="/login" method="post">
+  <h1><img src='/static/images/logo.png' alt="Login" width=150>
+</h1>
+  {% if error %}
+    <p class=error><strong>Error:</strong> {{ error }}
+  {% endif %}
+    <dl>
+      <input type="text" placeholder="first name" name="first"> 
+      <input type="text" placeholder="last name" name="last">
+      <input type="text" placeholder="username" name="username" value="{{
+          request.form.username }}">
+      <input type="password" name="password" placeholder="password">
+      <input type="password" name="confirm password" placeholder="confirm password">   
+  </dl>
+    <p><input type="submit" name="Sign Up" value="Sign Up">
+
+      
+    
+   </form>
+ </body>
+</html>

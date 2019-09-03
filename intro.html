@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+{% block body %}
+  <html>
+    <head>
+      <img src='/static/images/hivelogo2.png' alt="/static/images/hivelogo.png" width=350>
+        <style>
+          img {
+             position: absolute;
+             top: 50%;
+             left: 50%;
+             width: 648px;
+             margin-left: -324px;
+             height: 514px;
+             margin-top: -257px;
+             -moz-animation: fadein 3s; /* Firefox */
+             -webkit-animation: fadein 3s; /* Safari and Chrome */
+             -o-animation: fadein 3s; /* Opera */
+          }
+          body{
+            background: black;
+          }
+          @keyframes fadein {
+            from {
+              opacity:0;
+              }
+            to {
+              opacity:1;
+              }
+          }
+          @-moz-keyframes fadein { 
+            from {
+              opacity:0;
+              }
+            to {
+              opacity:1;
+              }
+          }
+          @-webkit-keyframes fadein { 
+            from {
+              opacity:0;
+              }
+            to {
+              opacity:1;
+              }
+          }
+          @-o-keyframes fadein { 
+            from {
+              opacity:0;
+              }
+            to {
+            opacity: 1;
+             }
+          }
+      </style>
+      <script>
+        setTimeout(function() {
+        window.location.href = "home";
+        }, 2000);
+      </script>
+    </head>
+</html>
+{% endblock %}
